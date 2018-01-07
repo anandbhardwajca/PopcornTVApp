@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/White"
+    android:orientation="vertical"
+    android:padding="@dimen/large_margin">
+
+    <!-- celeb image, name and post description layout -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/singleListItemCelebProfileImageView"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:src="@mipmap/logo" />
+
+        <TextView
+            android:id="@+id/singleListItemCelebNameTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="@dimen/small_margin"
+            android:layout_toRightOf="@id/singleListItemCelebProfileImageView"
+            android:text="@string/hint_celeb_name"
+            android:textColor="@color/Black"
+            android:textSize="@dimen/large_text"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/singleListItemPostDescTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/singleListItemCelebNameTextView"
+            android:layout_marginLeft="@dimen/small_margin"
+            android:layout_marginTop="@dimen/small_margin"
+            android:layout_toRightOf="@id/singleListItemCelebProfileImageView"
+            android:text="@string/hint_post_desc"
+            android:textSize="@dimen/medium_text"
+            android:textStyle="normal" />
+    </RelativeLayout> <!-- end of celeb image, name and post description relative layout -->
+
+    <!-- image container -->
+    <LinearLayout
+        android:id="@+id/singleListItemImageContainer"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/image_height"
+        android:orientation="horizontal"
+        android:padding="@dimen/small_margin">
+
+        <!-- image container 1 -->
+        <LinearLayout
+            android:id="@+id/singleListItemImageContainer1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/singleListItemImage1"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/logo" />
+
+            <View
+                android:id="@+id/firstView"
+                android:layout_width="match_parent"
+                android:layout_height="2dp" />
+
+            <ImageView
+                android:id="@+id/singleListItemImage3"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/logo"
+                android:visibility="gone" />
+
+        </LinearLayout>
+
+        <!-- end of image container 1 -->
+
+        <View
+            android:id="@+id/secondView"
+            android:layout_width="2dp"
+            android:layout_height="match_parent" />
+
+        <!-- image container 2 -->
+        <LinearLayout
+            android:id="@+id/singleListItemImageContainer2"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/singleListItemImage2"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/logo" />
+
+            <View
+                android:id="@+id/thirdView"
+                android:layout_width="match_parent"
+                android:layout_height="2dp" />
+
+            <ImageView
+                android:id="@+id/singleListItemImage4"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/logo"
+                android:visibility="gone" />
+
+        </LinearLayout>
+
+        <!-- end of image container 1 -->
+
+    </LinearLayout>
+
+    <!-- end of image containers -->
+
+
+</LinearLayout>
